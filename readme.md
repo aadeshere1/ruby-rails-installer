@@ -42,7 +42,7 @@ Lastly run the script
 
 * **Aadesh Shrestha** - *Started this project and wrote script for arch linux*
 
-## contributors
+## Contributors
 
 * **Rabin Gaire** - *Wrote script for ubuntu linux*
 
