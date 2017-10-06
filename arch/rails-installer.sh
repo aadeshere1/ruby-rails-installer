@@ -27,13 +27,18 @@ eval "$(rbenv init -)"
 echo "check ruby version"
 ruby -v
 
+gems = "bundler rails"
 
-if [ $b == 'Y' ] || [ $b == 'y' ] ; then
-  gem install bundler
-fi
+for gem in $gems; do
+  echo "Installing gem $gem"
+  gem install $gem
+done
 
 echo "rehash rbenv"
 rbenv rehash
 
-echo "install rails(latest available)"
-gem install rails 
+read -p "Create test project? (Y/N)" p
+if [ $p == 'Y' ] || [ $p == 'y' ] ; then
+  rails new test_project
+fi
+
