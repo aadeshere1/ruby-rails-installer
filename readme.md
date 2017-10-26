@@ -7,7 +7,7 @@ This project consists of simple and easy to use shell script to install Ruby / R
 What things you need to install the software and how to install them
 
 ```
-Uses gcc-5 to build Ruby 
+Uses gcc-5 to build Ruby
 ```
 
 ### Installing
@@ -45,6 +45,7 @@ Lastly run the script
 ## Contributors
 
 * **Rabin Gaire** - *Wrote script for ubuntu linux*
+* **Dipen Ved** - *Wrote script for fedora*
 
 ## License
 
