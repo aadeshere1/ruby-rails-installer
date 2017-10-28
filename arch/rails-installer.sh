@@ -14,12 +14,26 @@ yaourt -S ruby-build
 sudo pacman -S --needed gcc5 base-devel libffi libyaml openssl zlib
 
 echo "gcc 7.2 throws segmentation fault"
-echo "Installing ruby 2.4.0 with gcc 5 compiler"
-echo "run rbenv install version to see list"
-CC=/usr/bin/gcc-5 rbenv install 2.4.0
 
-echo "making 2.4.0 global version"
-rbenv global 2.4.0
+read -p "Choose ruby version" p
+echo "1. 2.3.0"
+echo "2. 2.4.0"
+if [ $p == 1 ] ; then
+  echo "Installing ruby 2.3.0 with gcc 5 compiler"
+  echo "using openssl-1.0"
+  echo "run rbenv install version to see list"
+  PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig CC=/usr/bin/gcc-5 rbenv install 2.3.0
+  echo "making 2.3.0 global version"
+  rbenv global 2.3.0
+else 
+  if [ $p == 2 ] ; then
+  echo "Installing ruby 2.4.0 with gcc 5 compiler"
+  echo "using openssl-1.0"
+  PKG_CONFIG_PATH=/usr/lib/openssl-1.0/pkgconfig CC=/usr/bin/gcc-5 rbenv install 2.4.0
+  echo "making 2.4.0 global version"
+  rbenv global 2.4.0
+  fi
+fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
