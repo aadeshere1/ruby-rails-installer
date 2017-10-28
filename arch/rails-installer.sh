@@ -15,9 +15,11 @@ sudo pacman -S --needed gcc5 base-devel libffi libyaml openssl zlib
 
 echo "gcc 7.2 throws segmentation fault"
 
-read -p "Choose ruby version" p
+echo "Choose ruby version "
 echo "1. 2.3.0"
 echo "2. 2.4.0"
+read -p "Install ruby : " p
+
 if [ $p == 1 ] ; then
   echo "Installing ruby 2.3.0 with gcc 5 compiler"
   echo "using openssl-1.0"
