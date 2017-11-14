@@ -44,7 +44,7 @@ Lastly run the script
 
 ## Contributors
 
-* **Rabin Gaire** - *Wrote script for ubuntu linux*
+* **Rabin Gaire** - *Wrote script for ubuntu linux and macos*
 * **Dipen Ved** - *Wrote script for fedora*
 
 ## License
